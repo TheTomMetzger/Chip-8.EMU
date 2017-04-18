@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreference
+        android:title="Sound"
+        android:summary="Turn sound on or off"
+        android:summaryOff="Turn sound on"
+        android:summaryOn="Turn sound off"
+        android:key="sound"
+        android:defaultValue="1"
+        />
+
+    <CheckBoxPreference
+        android:title="Use Custom Beep"
+        android:summaryOn="Using custom 'beep' sound"
+        android:summaryOff="Using default 'beep' sound"
+        android:key="useCustomBeep"
+        android:defaultValue="0"
+        />
+
+    <EditTextPreference
+        android:title="Custom Beep Sound URL"
+        android:summary="The URL of a custom 'beep' sound for the emulator to use"
+        android:key="customBeep"
+        android:layout_marginLeft="16dp"
+        />
+
+    <com.rarepebble.colorpicker.ColorPreference
+        android:title="Primary Color"
+        android:summary="The main color used to draw the graphics"
+        android:key="primaryColor"
+        android:defaultValue="#4cc2ec"
+        />
+
+    <com.rarepebble.colorpicker.ColorPreference
+        android:title="Secondary Color"
+        android:summary="The secondary color used to draw the graphics (i.e. background color)"
+        android:key="secondaryColor"
+        android:defaultValue="#000000"
+        />
+
+</PreferenceScreen>

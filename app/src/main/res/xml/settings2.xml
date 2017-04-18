@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:id="@+id/frameSkip"
+        android:defaultValue="0"
+        android:key="frameskip"
+        android:singleLine="true"
+        android:inputType="number"
+        android:maxLength="1"
+        android:summary="A higher frameskip will make the emulation run better, but at the cost of smoothness."
+        android:title="Frameskip" />
+</PreferenceScreen>

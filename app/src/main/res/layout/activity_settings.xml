@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context="com.tommetzger.chip_8emu.SettingsActivity">
+
+    <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:orientation="vertical">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp">
+
+            <include
+                android:id="@+id/navBar"
+                layout="@layout/toolbar">
+            </include>
+
+            <TextView
+                android:id="@+id/emulationSettingsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Emulation Settings"
+                android:visibility="visible"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/navBar"
+                android:layout_marginLeft="2dp"/>
+
+            <LinearLayout
+                android:id="@+id/settingsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emulationSettingsLabel"
+                app:layout_constraintHorizontal_bias="0.0">
+                <FrameLayout android:id="@+id/settingsFragmentFrame"
+                    android:layout_width="wrap_content"
+                    android:layout_height="375dp">
+                </FrameLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/swatchDisclaimer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Swatches do not update upon color selection."
+                android:textAlignment="center"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/settingsLayout"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+            <FrameLayout android:id="@+id/settingsFragmentFrame2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/swatchDisclaimer"
+                app:layout_constraintHorizontal_bias="0.0">
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/fileSettingsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="32dp"
+                android:text="File Management"
+                android:visibility="visible"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/settingsFragmentFrame2"/>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/sortROMsAlphabeticallyButton"
+                android:onClick="sortROMsAlphabetically"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Sort Alphabetically"
+                android:visibility="visible"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fileSettingsLabel"
+                android:layout_marginLeft="8dp"/>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/downloadTestROMButton"
+                android:onClick="downloadTestROM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Download Test ROM"
+                android:visibility="visible"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sortROMsAlphabeticallyButton"
+                android:layout_marginLeft="8dp"/>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/deleteAllROMsButton"
+                android:onClick="deleteAllROMs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Delete All ROMs"
+                android:visibility="visible"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/downloadTestROMButton"
+                android:layout_marginLeft="8dp"/>
+
+            <TextView
+                android:id="@+id/notificationsSettingsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="32dp"
+                android:text="Notifications"
+                android:visibility="visible"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/deleteAllROMsButton"/>
+
+            <!--<FrameLayout android:id="@+id/settingsFragmentFrame3"-->
+                         <!--android:layout_width="wrap_content"-->
+                         <!--android:layout_height="wrap_content"-->
+                         <!--android:layout_marginTop="8dp"-->
+                         <!--android:visibility="visible"-->
+                         <!--app:layout_constraintLeft_toLeftOf="parent"-->
+                         <!--app:layout_constraintRight_toRightOf="parent"-->
+                         <!--app:layout_constraintTop_toBottomOf="@+id/notificationsSettingsLabel"-->
+                         <!--app:layout_constraintHorizontal_bias="0.0">-->
+            <!--</FrameLayout>-->
+
+            <TextView
+                android:id="@+id/appSettingsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="32dp"
+                android:text="App Settings"
+                android:visibility="visible"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/notificationsSettingsLabel"/>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/resetSettingsButton"
+                android:onClick="resetSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Reset Settings"
+                android:visibility="visible"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appSettingsLabel"
+                android:layout_marginLeft="8dp"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>
