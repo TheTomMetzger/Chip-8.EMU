@@ -11,6 +11,7 @@ import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.util.TypedValue;
+import android.widget.Toast;
 
 import java.io.DataInputStream;
 import java.io.File;
@@ -210,7 +211,8 @@ public class Chip
                     default: //0NNN: Calls RCA 1802 Program At Address NNN
                     {
                         System.err.println("Unsupported Opcode!");
-                        System.exit(0);
+                        //System.exit(0);
+                        Toast.makeText(context, "Unsupported Opcode!", Toast.LENGTH_SHORT).show();
                         break;
                     }
                 }
@@ -427,7 +429,8 @@ public class Chip
                     default:
                     {
                         System.err.println("Unsupported Opcode!");
-                        System.exit(0);
+                        //System.exit(0);
+						Toast.makeText(context, "Unsupported Opcode!", Toast.LENGTH_SHORT).show();
                         break;
                     }
                 }
@@ -555,7 +558,8 @@ public class Chip
                     default:
                     {
                         System.err.println("Unsupported Opcode!");
-                        System.exit(0);
+                        //System.exit(0);
+						Toast.makeText(context, "Unsupported Opcode!", Toast.LENGTH_SHORT).show();
                     }
                 }
                 break;
@@ -671,7 +675,8 @@ public class Chip
                     default:
                     {
                         System.err.println("Unsupported Opcode!");
-                        System.exit(0);
+                        //System.exit(0);
+						Toast.makeText(context, "Unsupported Opcode!", Toast.LENGTH_SHORT).show();
                     }
                 }
                 break;
@@ -680,7 +685,8 @@ public class Chip
             default:
             {
                 System.err.println("Unsupported Opcode!");
-                System.exit(0);
+                //System.exit(0);
+				Toast.makeText(context, "Unsupported Opcode!", Toast.LENGTH_SHORT).show();
             }
         }
 

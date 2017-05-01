@@ -22,15 +22,15 @@
         android:focusable="false"/>
 </LinearLayout>
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:layout_alignParentRight="true">
-    <RatingBar
-        android:id="@+id/romRating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="setROMRating"/>
-</LinearLayout>
+<!--<LinearLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_alignParentRight="true">-->
+    <!--<RatingBar-->
+        <!--android:id="@+id/romRating"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:onClick="setROMRating"/>-->
+<!--</LinearLayout>-->
 
 </RelativeLayout>

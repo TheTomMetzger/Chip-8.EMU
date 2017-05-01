@@ -85,9 +85,9 @@ public class ROMListAdapter extends BaseAdapter
 		TextView romLabel = (TextView) rowItem.findViewById(R.id.romLabel);
 		romLabel.setText(romName);
 		
-		RatingBar romRating = (RatingBar) rowItem.findViewById(R.id.romRating);
-		romRating.setNumStars(preferences.getInt(romName+"Rating", 0));
-		
+//		RatingBar romRating = (RatingBar) rowItem.findViewById(R.id.romRating);
+//		romRating.setNumStars(preferences.getInt(romName+"Rating", 0));
+//
 		
 		return rowItem;
 	}
